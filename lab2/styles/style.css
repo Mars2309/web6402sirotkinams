@@ -1,0 +1,139 @@
+/* Основные стили */
+body {
+    font-family: Times New Roman, sans-serif;
+    background-color: #7D9093;
+    color: #CFCFD1;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+
+header {
+    background-color: #053430;
+    color: #0C1A1A;
+    padding: 15px;
+    text-align: center;
+    font-size:180%;
+}
+
+nav a {
+    color: #CFCFD1;
+    margin: 15px;
+    text-decoration: bold;
+    font-size:160%;
+}
+
+main {
+    padding: 20px;
+    margin: 15px;
+}
+.content-wrapper {
+    display: flex;
+    align-items: right; /* Выровнять элементы по вертикали */
+    gap: 80px; /* Отступ между изображением и заголовками */
+}
+
+/* Центрирование текста с классом .center */
+.center {
+    text-align: center;
+    font-size:300%;
+}
+
+/* Стили для текстовых блоков */
+.highlights {
+    color: #E0E0E1;
+    font-family: Times New Roman, sans-serif;
+    display: grid;
+    text-align: left;
+    font-size:400%;
+    margin-top:80px;
+    margin-left:400px;
+}
+
+.contacts{
+font-family: Times New Roman, sans-serif;
+    text-align: center;
+    font-size:200%;
+}
+
+/* Стили для изображений */
+.image {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+/* Стили для галереи мод */
+.gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 40%;
+    height: 1360px;
+    border: 2px solid #4B0082;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Таблица */
+table {
+    width: 100%;
+
+}
+
+th, td {
+    padding: 30px;
+    border: 1px solid #333333;
+    text-align: right;
+    font-family: Times New Roman, sans-serif;
+    font-size:200%;
+    color: #4B0082;
+
+}
+
+td[align="center"] {
+    text-align: right;
+}
+
+td[align="right"] {
+    text-align: right;
+    color: #4B0082;
+
+}
+tr:nth-child(even) {
+    background-color: #E6E6FA; /* Светлый цвет для четных строк */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF; /* Белый цвет для нечетных строк */
+}
+
+h1, h2, h3 {
+    color: #4B0082;
+}
+
+
+.article1, .article2 {
+    width: 80%; /* Устанавливаем ширину для каждой статьи, чтобы они занимали ряд */
+
+}
+
+/* Дополнительные стили для изображений */
+
+.article2 {
+display: flex;
+    gap: 780px;
+
+    padding: 10px;
+
+
+}
+
+.article1 {
+display: flex;
+    gap: 700px;
+
+    padding: 10px;
+
+
+}
