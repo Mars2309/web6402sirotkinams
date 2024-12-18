@@ -1,0 +1,504 @@
+/* Общие стили */
+body {
+    font-family: Times New Roman, sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+
+/* Навигация */
+nav a {
+    color: var(--text-color);
+    margin: 15px;
+    text-decoration: none;
+    font-size: 160%;
+    justify-content: space-around; /* Распределяет элементы по всему доступному пространству */
+    align-items: center; /* Выравнивает элементы по вертикали */
+    }
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    padding: 15px 20px;
+}
+
+header nav a {
+    color: var(--header-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Светлая тема (по умолчанию) */
+:root {
+    --body-bg: #82a08f;
+    --text-color: #e3f1e2;
+    --header-bg: #295a56;  
+    --header-color: #a3d0b5;
+    --link-hover-color: #00ffea; 
+    --button-bg: #333333;
+    --button-color: #00ffea;
+    --button-hover-bg: #6c208a;
+}
+
+/* Темная тема */
+body.dark-theme {
+    --body-bg: #724C9D;
+    --text-color: #DCCAE9;
+    --header-bg: #2C1B47;
+    --header-color: #9356A0;
+    --link-hover-color: #00ffea; 
+    --button-bg: #ffffff;
+    --button-color: #00ffea;
+    --button-hover-bg: #6c208a;
+}
+
+/* Кнопки */
+button {
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+
+.main{
+    grid-template-columns: 1fr; /* Все секции в одну колонку */
+    gap: 40px;
+    justify-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+
+
+/* Центрирование заголовков */
+.center {
+    font-size: 65px; /* Увеличиваем размер шрифта */
+    text-align: center; /* Центрируем текст */
+    margin: 20px 0; /* Добавляем отступы сверху и снизу для разделения */
+}
+
+.cover {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 900px;
+    width: 100%;
+    background-color: #6a3b83; 
+    overflow: hidden;
+}
+
+/* Стили для изображения */
+.cover .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Полупрозрачный оверлей */
+.cover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Текст в центре */
+.cover .cover-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+/* Стили для списка внутри текста */
+.cover .cover-text ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Секция с заголовками */
+.highlights {
+    display: grid;
+    text-align: left;
+    font-size: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Центрирование заголовка в секции highlights */
+.highlights h2 {
+    text-align: center; /* Центрирует заголовок */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Секция контактов */
+.contacts {
+    display: grid;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Стили для формы */
+form {
+    display: grid;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form label {
+    font-size: 1.2rem;
+}
+
+form input {
+    padding: 8px;
+    font-size: 1rem;
+}
+
+form button {
+    align-self: center;
+    padding: 10px 20px;
+}
+
+
+
+/* Общий контейнер карусели */
+.gallery {
+    position: relative;
+    width: 70%; /* Увеличиваем ширину для лучшего отображения */
+    max-width: 600px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем галерею */
+    overflow: hidden; /* Скрываем лишние элементы */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+/* Обертка для слайдов */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Каждый слайд */
+.carousel-item {
+    flex: 0 0 100%; /* Каждый слайд занимает 100% ширины */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Изображения */
+.carousel-item img {
+    max-width: 100%;  /* Ограничиваем максимальную ширину изображения */
+    max-height: 100%; /* Ограничиваем максимальную высоту изображения */
+    object-fit:fill; /* Сохраняем пропорции изображения без обрезки */
+    border-radius: 8px;
+}
+
+/* Кнопки */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Адаптация для экранов до 1024px (планшеты) */
+@media (max-width: 1024px) {
+    .gallery {
+        width: 90%; /* Уменьшаем ширину для планшетов */
+    }
+
+    .carousel-btn {
+        width: 40px; /* Увеличиваем кнопки для удобства */
+        height: 40px;
+    }
+
+    .carousel-item img {
+        width: 95%; /* Немного уменьшаем изображения */
+    }
+}
+
+/* Адаптация для экранов до 768px (планшеты и мобильные устройства) */
+@media (max-width: 768px) {
+    .gallery {
+        width: 90%; /* Делаем карусель шириной 100% */
+    }
+
+    .carousel-btn {
+        width: 30px; /* Уменьшаем размер кнопок */
+        height: 30px;
+        font-size: 18px; /* Уменьшаем шрифт кнопок */
+    }
+
+    .carousel-item img {
+        width: 100%; /* Изображения на 100% ширины */
+    }
+}
+
+/* Адаптация для экранов до 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .gallery {
+        width: 90%; /* Ширина галереи на мобильных устройствах */
+    }
+
+    .carousel-btn {
+        width: 25px; /* Уменьшаем кнопки */
+        height: 25px;
+        font-size: 16px; /* Еще меньше шрифт на маленьких экранах */
+    }
+
+    .carousel-item img {
+        width: 100%; /* На маленьких экранах также 100% */
+    }
+}
+
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 30px;
+    border: 1px solid #333333;
+    text-align: center;
+    font-family: Times New Roman, sans-serif;
+    font-size: 200%;
+    color: #4B0082;
+}
+
+tr:nth-child(even) {
+    background-color: #E6E6FA;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3 {
+    color: #4B0082;
+}
+
+
+/* Статьи с flex */
+.article1, .article2 {
+    display: flex;
+    flex-direction: row; /* Располагаем элементы горизонтально */
+    gap: 20px; /* Отступ между изображением и текстом */
+    margin-bottom: 20px;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    padding: 20px; /* Добавляем отступы вокруг всей статьи */
+}
+
+/* Стили для изображения */
+.article1 img, .article2 img {
+    width: 40%; /* Уменьшаем размер изображения */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; /* Добавляем отступ справа от изображения */
+}
+
+/* Заголовки */
+.article1 h2, .article2 h2 {
+    font-size: 90px;
+    text-align: center;
+    flex-basis: 100%; /* Заголовок занимает всю ширину */
+    margin-bottom: 20px; /* Добавляем отступ снизу от заголовка */
+}
+
+/* Текст */
+.article1 p, .article2 p {
+    font-size: 50px;
+    flex-grow: 1; /* Текст займет оставшееся пространство рядом с изображением */
+    margin: 0 20px; /* Добавляем отступы слева и справа для текста */
+}
+
+
+/* Плавающие частицы */
+/* Стили для контейнера частиц */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Стили для звездочек */
+.particle {
+    z-index: -5;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* форма звезды */
+    animation: floatParticles 2s ease-out infinite;
+    pointer-events: none; /* Частицы не должны мешать взаимодействию с другими элементами */
+}
+
+/* Анимация для движения звездочек */
+@keyframes floatParticles {
+    0% {
+        opacity: 1;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1) rotate(180deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(360deg);
+    }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(10px) rotate(90deg); }
+    100% { transform: translateX(-10px) rotate(180deg); }
+}
+
+
+
+/* Навигация для мобильных устройств */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Переключаем на вертикальную ориентацию */
+        align-items: center; /* Центрируем элементы */
+        padding: 10px;
+        width: 100%; /* Обеспечиваем, что навигация будет занимать всю ширину */
+    }
+
+    nav a {
+        font-size: 1.4rem; /* Увеличиваем размер шрифта для удобства на мобильных */
+        margin: 8px 0; /* Немного увеличиваем отступы между ссылками */
+        text-align: center; /* Центрируем ссылки */
+        width: 100%; /* Каждая ссылка будет занимать всю ширину */
+    }
+
+    nav .logo {
+        font-size: 2rem; /* Уменьшаем размер логотипа на мобильных */
+        text-align: center; /* Центрируем логотип */
+        margin-bottom: 15px; /* Добавляем отступ снизу */
+    }
+
+    /* Дополнительные стили для улучшения визуального восприятия на мобильных */
+    header {
+        flex-direction: column; /* Сделаем шапку вертикальной */
+        align-items: center; /* Центрируем элементы шапки */
+        padding: 10px;
+    }
+
+    header .logo {
+        font-size: 2rem; /* Уменьшаем размер логотипа в шапке */
+    }
+
+    /* Для ссылок в навигации убираем горизонтальные отступы */
+    header nav {
+        width: 100%;
+    }
+
+    header nav a {
+        font-size: 1.4rem;
+        margin: 8px 0; /* Увеличиваем вертикальные отступы для удобства */
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+
+    .center {
+        font-size: 36px; /* Уменьшаем размер текста */
+    }
+
+    .cover {
+        height: 400px; /* Уменьшаем размер обложки */
+    }
+
+    .highlights, .contacts {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта */
+        padding: 10px;
+    }
+
+    .article1, .article2 {
+        flex-direction: column; /* Размещение элементов вертикально */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .article1 img, .article2 img {
+        width: 80%; /* Уменьшаем изображения */
+    }
+
+    .article1 p, .article2 p {
+        font-size: 18px; /* Уменьшаем шрифт для мобильных */
+    }
+
+    /* Адаптация таблицы */
+    table th, table td {
+        padding: 15px;
+        font-size: 1rem; /* Уменьшаем шрифт в таблицах */
+    }
+}
+

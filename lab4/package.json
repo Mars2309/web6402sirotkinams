@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "server": "json-server --watch db.json --port=8000"
+  }
+}

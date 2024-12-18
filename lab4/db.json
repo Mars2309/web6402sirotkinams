@@ -1,0 +1,59 @@
+{
+  "subscribers": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "a@email.ru"
+    },
+    {
+      "id": "2",
+      "name": "Jane Doe",
+      "email": "b@email.ru"
+    },
+    {
+      "id": "daac",
+      "name": "jj",
+      "email": "jj@mail.ru"
+    },
+    {
+      "id": "f14c",
+      "name": "kk",
+      "email": "kk@mail.ru"
+    },
+    {
+      "id": "d651",
+      "name": "ttt",
+      "email": "ttt@ttt.tt"
+    },
+    {
+      "id": "020c",
+      "name": "someuser",
+      "email": "someuser@email.com"
+    },
+    {
+      "id": "9d65",
+      "name": "d",
+      "email": "d@d.d"
+    },
+    {
+      "id": "6a41",
+      "name": "rrr",
+      "email": "rrr@rrr.r"
+    },
+    {
+      "id": "1b1a",
+      "name": "ss",
+      "email": "ss@s.s"
+    },
+    {
+      "id": "4345",
+      "name": "cc",
+      "email": "cc@mail.ru"
+    },
+    {
+      "id": "5601",
+      "name": "vvv",
+      "email": "vv@v.v"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "data": [
+      {
+        "id": "1",
+        "song_name": "Only one",
+        "artist_name": "XO"
+      },
+      {
+        "id": "2",
+        "song_name": "Timeless",
+        "artist_name": "Theweeknd"
+      },
+      {
+        "id": "3",
+        "song_name": "Goodnight n go",
+        "artist_name": "AG"
+      }
+    ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Журнал о музыке и моде</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <div class="particles"></div>
+    <header>
+        <h1 style="color:#CFCFD1">Журнал о музыке и моде</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <a href="fashion.html">Мода и стиль</a>
+            <a href="releases.html">Музыкальные новинки</a>
+        </nav>
+        <button id="themeToggle">Сменить тему</button>
+    </header>
+    <main class="main-grid">
+        <section class="cover">
+            <img class="image" src="images/pnfht.jpg" alt="Обложка журнала">
+            <div class="overlay"></div> <!-- Затемнённый фон -->
+            <div class="cover-text">
+                <h1>Добро пожаловать в журнал, посвященный музыке и моде.</h1>
+            </div>
+        </section>
+        <section class="highlights">
+            <h2>Последние заголовки:</h2>
+            <ul>
+                <li>Секреты стильных образов звезд</li>
+                <li>Последние музыкальные релизы месяца</li>
+                <li>Громкие новости из жизни музыкантов</li>
+            </ul>
+        </section>
+        <section class="contacts">
+            <h3>Контакты</h3>
+            <p>Email: info@musicfashionmagazine.com</p>
+            <p>Телефон: +7 (123) 456-78-90</p>
+
+            <h2>Подпишитесь на новости</h2>
+            <form id="subscriptionForm" method="post" action="http://127.0.0.1:3000/subscribers">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Отправить</button>
+            </form>
+            <p id="responseMessage"></p>
+        </section>
+    </main>
+</body>
+</html>
